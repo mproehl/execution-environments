@@ -1,0 +1,33 @@
+---
+version: 3
+
+images:
+  base_image:
+    name: quay.io/fedora/fedora-minimal:43
+
+dependencies:
+
+  system:
+    - openssh-clients
+    - sshpass
+
+  ansible_runner:
+    package_pip: ansible-runner
+
+  ansible_core:
+    package_pip: ansible-core
+
+  python:
+    - requests
+
+  galaxy:
+    collections:
+      - name: community.proxmox
+      - name: ansible.netcommon
+      - name: ansible.posix
+      - name: ansible.scm
+      - name: ansible.utils
+
+additional_build_steps:
+  prepend_base:
+    - RUN /usr/bin/dnf5 -y -q install git-core python3-devel; /usr/bin/dnf5 clean all
