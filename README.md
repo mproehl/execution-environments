@@ -2,16 +2,17 @@
 
 This repository contains YAML definitions for various Ansible Execution Environments (EEs)
 
-## `execution-environment-default.yml`
+## Default EE
 
-* Multi purpose EE
+* Definition file: `execution-environment-default.yml`
+* Description: multi-purpose EE
 * How to built:
   ```
   ansible-navigator builder build -t ee_default  -f execution-environment-default.yml
   ```
-## `execution-environment-kubespray.yml`
-
-* A special EE that includes https://github.com/kubernetes-sigs/kubespray as a collection
+## Kubespray EE
+* Definition file: `execution-environment-kubespray.yml`
+* Description: special EE that includes https://github.com/kubernetes-sigs/kubespray as a collection
 * How to built:
   ```
   ansible-navigator builder build -t ee_kubespray  -f execution-environment-kubespray.yml
