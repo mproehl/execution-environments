@@ -19,14 +19,34 @@ dependencies:
 
   python:
     - requests
+    - grpcio
+    - jsonschema
+    - jxmlease
+    - ncclient
+    - netaddr>=0.10.1
+    - paramiko
+    - protobuf
+    - proxmoxer>=2.0
+    - pyang
+    - textfsm
+    - ttp
+    - xmltodict
 
   galaxy:
     collections:
+      - community.general
       - name: community.proxmox
       - name: ansible.netcommon
       - name: ansible.posix
       - name: ansible.scm
       - name: ansible.utils
+      - name: ansible.network
+      - name: ansible.security
+      - name: ansible.snmp
+      - name: ansible.utils
+      - name: ansible.windows
+      - name: ansible.yang
+
 
 additional_build_steps:
   prepend_base:
