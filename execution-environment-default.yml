@@ -54,4 +54,4 @@ dependencies:
 
 additional_build_steps:
   prepend_base:
-    - RUN /usr/bin/dnf5 -y -q install git-core python3-devel; /usr/bin/dnf5 clean all
+    - RUN /usr/bin/dnf5 -y -q install git-core python3-devel && /usr/bin/dnf5 clean all
