@@ -38,7 +38,7 @@ dependencies:
 
   galaxy:
     collections:
-      - community.general
+      - name: community.general
       - name: community.proxmox
       - name: kubernetes.core
       - name: ansible.netcommon
