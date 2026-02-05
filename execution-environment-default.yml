@@ -10,6 +10,7 @@ dependencies:
   system:
     - openssh-clients
     - sshpass
+    - helm
 
   ansible_runner:
     package_pip: ansible-runner
@@ -19,6 +20,7 @@ dependencies:
 
   python:
     - requests
+    - requests-oauthlib
     - grpcio
     - jsonschema
     - jxmlease
@@ -31,11 +33,14 @@ dependencies:
     - textfsm
     - ttp
     - xmltodict
+    - jsonpatch
+    - kubernetes>=24.2.0
 
   galaxy:
     collections:
       - community.general
       - name: community.proxmox
+      - name: kubernetes.core
       - name: ansible.netcommon
       - name: ansible.posix
       - name: ansible.scm
@@ -46,7 +51,6 @@ dependencies:
       - name: ansible.utils
       - name: ansible.windows
       - name: ansible.yang
-
 
 additional_build_steps:
   prepend_base:
